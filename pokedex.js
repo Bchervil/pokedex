@@ -26,12 +26,13 @@ let pokeyJane = new Trainer('pokey jane')
 
 
 class Pokemon{
-constructor(name, attack, ability, defense, hp){
+constructor(name, attack, ability, defense, hp, id){
      this.name = name
      this.attack = attack,
      this.ability = ability,
      this.defense = defense,
      this.hp = hp
+     
 }
 
 }
