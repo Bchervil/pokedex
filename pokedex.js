@@ -116,19 +116,17 @@ function callClefairy(){
       document.getElementById('pokeball').addEventListener('click', grab);
   }
 
-
-
-  function updateScreen(pokemon) {
+   function updateScreen(pokemon) {
     let name = document.getElementById('name');
     let attack = document.getElementById('attack');
     let ability = document.getElementById('ability');
     let defense = document.getElementById('defense');
     let hp = document.getElementById('hp');
 
-    name.innerHTML = pokemon.name;
-    attack.innerHTML = pokemon.attack;
-    ability.innerHTML = pokemon.ability;
-    defense.innerHTML = pokemon.defense;
-    hp.innerHTML = pokemon.hp;
+    name.innerHTML = (` Name: ${pokemon.name}`);
+    attack.innerHTML = (`Attack:${pokemon.attack}`);
+    ability.innerHTML = (`Ability:${pokemon.ability}`);
+    defense.innerHTML = (`Defense:${pokemon.defense}`);
+    hp.innerHTML = (`HP:${pokemon.hp}`);
 
          }

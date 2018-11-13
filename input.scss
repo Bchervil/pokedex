@@ -1,7 +1,14 @@
 $primary-color: lightgrey;
-$secondary-color: black;
-$ppp-pp: ;
+$p-color: black;
+$l-color: lightgreen;
+
+
+
+#stat-list{
+	list-style-type: none;
+}
 h1{
+	padding-top:10px;
 	font-family: Raleway;
 	margin-left: 1.66%;
   text-align: center;
@@ -11,28 +18,48 @@ h1{
 	border-bottom: 2px solid #f1f1f1;
 	width: 30%;
 	padding-bottom: 30px;
-  color:white;
+  color:$p-color;
+
 }
-.card {
-    box-shadow: 0 10px 20px 0 rgba(2,1,1,1);
-    transition: 0.3s;
-    width: 15%;
-		height:auto;
-		background-color: red;
+h3{
+	text-align: right;
 }
+.modal-body{
+background-color: $l-color;
+.modal-title{
+	background-color:$p-color;
+	font-family: serif;
+}
+
+}
+.pokemon-info {
+	background-color: $l-color;
+	font-family:sans-serif;
+  text-align: center;
+  padding-right: 0%;
+	transition: opacity 0.5s ease-in;
+	width: 40%;
+
+}
+#modal{
+	background-color: $l-color;
+}
+
+
 body{
 padding: 0px;
 background-color: $primary-color;
 }
 
 
-h3{
-	color: $secondary-color;
+div p{
+	color: $p-color;
 	padding: 5px;
+	text-align: right;
 }
 
-img {s
-
+img {
+      margin-left:450px;
       filter: grey;
       -webkit-filter: grayscale(1);
       -webkit-transition: all .8s ease-in-out;
@@ -54,15 +81,12 @@ img {s
 body{
 padding: 0px;
 background-color: $primary-color;
+height:auto;
+}
+img d-block{
+	justify-content: 0px;
 }
 
-#main-grid{
-display: grid;
-grid-template: 95% / auto auto auto;
-margin: 7%;
-padding: 5px;
-
-}
 
 html, body {
     height: 100%;
@@ -80,7 +104,7 @@ h2{
 
 
 #pokeball {
-    height: 100%;
+    height: 122%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -119,11 +143,7 @@ h2{
     background: white;
 }
 
-.pokemon-info{
-background-color: red;
-font-family:sans-serif;
 
-}
 #bottom {
     grid-row: 2/3;
     background: white;
@@ -138,24 +158,19 @@ font-family:sans-serif;
 	height: 100%;
   text-align: center;
 	margin:10px;
+	display:none;
 
   }
-
-.pokemon-info {
-  background-color: red;
-  max-width: 90% auto;
-
-  margin: 0;
-  border-radius: 5px;
-	}
-
-#stat-list {
-  list-style-type: none;
-  text-align: center;
-  padding-right: 9%;
+.carousel-item{
+	width: 105%;
 }
+#carousel-item img{
 
-
+	position: -20%;
+}
+.carousel{
+	height:65%;
+}
 @keyframes move {
     0% {
         transform: rotate(0);
@@ -182,4 +197,15 @@ font-family:sans-serif;
   80% { transform: translate(-1px, -1px) rotate(1deg); }
   90% { transform: translate(1px, 2px) rotate(0deg); }
   100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+@keyframes rotation {
+  100% {transform: rotate(360deg);}
+}
+@-webkit-keyframes rotation {
+  100% {transform: rotate(360deg);}
+}
+.animated {
+  animation: rotation 1s linear;
+  -webkit-animation: rotation 1s linear;
 }
