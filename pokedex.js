@@ -1,39 +1,42 @@
+
+var allPokemon=[];
+
 class Trainer {
         constructor(name) {
             this.name = name;
-            this.Pokemon = [];
+
         }
 
         all() {
-             console.log(this.Pokemon)
-            return this.Pokemon;
+
+            return allPokemon;
         }
 
         get(name) {
-            for (let i = 0; i < this.Pokemon.length; i++) {
-                let pokemonName = this.Pokemon[i].name;
-                if (pokemonName == name) {
-                    return this.Pokemon[i];
-                }
+     if(name == 'aggron' ){
+     return callAggron();
             }
-            return false;
-        }
-
+if(name == 'gastly'){
+  return CallGastly();
+      } else if(name == 'clefairy'){
+  return callClefairy();
     }
-
-let pokeyJane = new Trainer('pokey jane')
-
+        }
+}
+let trainer = new Trainer('pokey jane');
 
 
 class Pokemon{
-constructor(name, attack, ability, defense, hp, id){
+constructor(name, attack, ability, defense, hp){
+
      this.name = name
      this.attack = attack,
      this.ability = ability,
      this.defense = defense,
-     this.hp = hp
-     
-}
+     this.hp = hp;
+
+
+   }
 
 }
 
@@ -57,7 +60,7 @@ function callAggron() {
 
             console.log(newPokemon)
             updateScreen(newPokemon)
-
+            allPokemon.push(newPokemon);
         }
     };
     xhttp.open('GET', 'http://fizal.me/pokeapi/api/v2/name/aggron.json', true);
@@ -81,6 +84,7 @@ function callGastly(){
 
 console.log(newPokemon)
 updateScreen(newPokemon)
+allPokemon.push(newPokemon);
         }
     };
     xhttp.open('GET', 'http://fizal.me/pokeapi/api/v2/name/gastly.json', true);
@@ -107,6 +111,7 @@ function callClefairy(){
 
   console.log(newPokemon)
   updateScreen(newPokemon)
+  allPokemon.push(newPokemon);
       }
   };
   xhttp.open('GET', 'http://fizal.me/pokeapi/api/v2/name/clefairy.json', true);
