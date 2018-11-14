@@ -1,4 +1,9 @@
+#stat-list {
+  list-style-type: none;
+}
+
 h1 {
+  padding-top: 10px;
   font-family: Raleway;
   margin-left: 1.66%;
   text-align: center;
@@ -11,6 +16,31 @@ h1 {
   color: black;
 }
 
+h3 {
+  text-align: right;
+}
+
+.modal-body {
+  background-color: lightgreen;
+}
+.modal-body .modal-title {
+  background-color: black;
+  font-family: serif;
+}
+
+.pokemon-info {
+  background-color: lightgreen;
+  font-family: sans-serif;
+  text-align: center;
+  padding-right: 0%;
+  transition: opacity 0.5s ease-in;
+  width: 40%;
+}
+
+#modal {
+  background-color: lightgreen;
+}
+
 body {
   padding: 0px;
   background-color: lightgrey;
@@ -19,9 +49,11 @@ body {
 div p {
   color: black;
   padding: 5px;
+  text-align: right;
 }
 
 img {
+  margin-left: 450px;
   filter: grey;
   -webkit-filter: grayscale(1);
   -webkit-transition: all 0.8s ease-in-out;
@@ -41,6 +73,10 @@ body {
   height: auto;
 }
 
+img d-block {
+  justify-content: 0px;
+}
+
 html, body {
   height: 100%;
   padding: 0;
@@ -54,7 +90,7 @@ h2 {
 }
 
 #pokeball {
-  height: 100%;
+  height: 122%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -115,14 +151,16 @@ h2 {
   display: none;
 }
 
-.pokemon-info {
-  background-color: lightgreen;
-  font-family: sans-serif;
-  list-style-type: none;
-  text-align: center;
-  padding-right: 0%;
-  transition: opacity 0.5s ease-in;
-  width: 40%;
+.carousel-item {
+  width: 105%;
+}
+
+#carousel-item img {
+  position: -20%;
+}
+
+.carousel {
+  height: 65%;
 }
 
 @keyframes move {
