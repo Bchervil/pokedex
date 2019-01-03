@@ -7,6 +7,6 @@ A simple pokedex created for my second assignment at NYCDA
  Use and understanding of Sass.
  
  
- 
+ https://bchervil.github.io/pokedex/
  
  
